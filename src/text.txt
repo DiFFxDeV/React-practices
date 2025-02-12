@@ -1,0 +1,3 @@
+By default Home after login Home page 
+Navbar>Home, Profile>
+In profile show and Email
