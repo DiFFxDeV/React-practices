@@ -1,18 +1,16 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuth, UserProvider } from "../context/UserContext";
-import { useNavigate } from "react-router-dom";
 
 const LoginComp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { login } = useAuth();
-  const navigate = useNavigate();
+  const { login } = useAuth(); //get the login funtion from UserOCntext
+  // const navigate = useNavigate();
 
   const handleSubmit = (e) => {
-    navigate("/home");
     e.preventDefault();
-    login(email);
+    login(email); // Store email and go to home
   };
 
   return (

@@ -4,6 +4,10 @@ import LoginComp from "./components/LoginComp";
 import Profile from "./pages/Profile";
 import Home from "./pages/Home";
 
+//Router enable routing
+//UserProvider wrapes all routes ot share the context everywhere means any component inside it can share data like props
+//Routes is used for which comp is shows at which URL
+
 function App() {
   return (
     <Router>
