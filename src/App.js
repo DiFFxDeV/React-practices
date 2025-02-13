@@ -3,6 +3,9 @@ import { UserProvider } from "./context/UserContext";
 import LoginComp from "./components/LoginComp";
 import Profile from "./pages/Profile";
 import Home from "./pages/Home";
+import Dbounce from "./components/Dbounce";
+import UserData from "./pages/UserData";
+import Navbar from "./components/Navbar";
 
 //Router enable routing
 //UserProvider wrapes all routes ot share the context everywhere means any component inside it can share data like props
@@ -10,15 +13,19 @@ import Home from "./pages/Home";
 
 function App() {
   return (
-    <Router>
-      <UserProvider>
-        <Routes>
-          <Route path="/" element={<LoginComp />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/profile" element={<Profile />} />
-        </Routes>
-      </UserProvider>
-    </Router>
+    <>
+      <Router>
+        <UserProvider>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<LoginComp />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/userdata" element={<UserData />} />
+          </Routes>
+        </UserProvider>
+      </Router>
+    </>
   );
 }
 

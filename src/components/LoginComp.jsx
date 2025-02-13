@@ -14,7 +14,7 @@ const LoginComp = () => {
   };
 
   return (
-    <section className="bgGradient min-h-screen flex justify-center items-center">
+    <section className="min-h-screen flex justify-center items-center">
       <div className="shadow-lg rounded-3xl mx-auto w-full max-w-md bg-gray-900 p-8 text-gray-100">
         <p className="text-center text-2xl font-bold">Login</p>
         <form className="mt-6">
